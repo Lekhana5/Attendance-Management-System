@@ -138,9 +138,17 @@
         </div>
 
         <div class="buttons-container">
-            <button class="login-button">Login</button>
-            <button class="register-button">Register</button>
+            <button onclick="redirectToLogin()" class="login-button">Login</button>
+            <button onclick="redirectToRegister()" class="register-button">Register</button>
         </div>
     </section>
+    <script>
+        function redirectToLogin() {
+            window.location.href = 'login.html'; // Replace with the actual URL of your login page
+        }
+        function redirectToRegister() {
+            window.location.href = 'register.html'; // Replace with the actual URL of your login page
+        }
+    </script>
 </body>
 </html>
