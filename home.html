@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,35 +19,31 @@
             justify-content: flex-start;
             align-items: center;
             padding: 20px;
-            background-color: #000000;
+            height: 200px;
+            background-color: #494949;
         }
 
         header img {
-            width: 7%; /* Adjust the width as needed */
+            width: 20%;
+            /* Adjust the width as needed */
             margin-right: 2px;
         }
 
         section {
             display: flex;
-            margin: 20px;
-            text-align: center;
-            margin-top: 40px;
-            height: 400px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 20px;
+            margin: 10px;
+            height: 100%;
+            padding-top: 50px;
         }
 
-        .introduction {
+        .text-container {
             flex: 1;
-            font-size: 20px;
-            line-height: 1.5;
-            color: #000000;
-            margin-left: 28px;
-            background-color: rgba(226, 227, 212, 0.7);
-            max-width: 600px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 25px;
+            color: #f5f5f5;
+            text-align: left;
+            padding-right: 60px;
+            margin-left: 80px;
+            font-size: 17px;
+            margin-top: 10px;
         }
 
         .image-container {
@@ -54,18 +51,23 @@
         }
 
         .image-container img {
-            width: 60%;
-            opacity: 0.65;
+            width: 80%;
+            height: 85%;
+            border-radius: 15%;
+            margin-right: 0px;
+            margin-top: 22px;
+            object-fit: cover; /* Ensures the image covers the entire container */
         }
 
         .buttons-container {
             position: absolute;
             top: 20px;
             right: 20px;
-            margin-top: 20px;
+            margin-top: 75px;
         }
 
-        .login-button, .register-button {
+        .login-button,
+        .register-button {
             background-color: #f2f2f2;
             color: rgb(0, 0, 0);
             border: none;
@@ -80,7 +82,8 @@
             transition: background-color 0.3s ease;
         }
 
-        .login-button:hover, .register-button:hover {
+        .login-button:hover,
+        .register-button:hover {
             background-color: #dd7a7a;
         }
 
@@ -91,20 +94,21 @@
 
         h1 {
             color: #f5f5f5;
-            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-family: Georgia, 'Times New Roman', Times, serif;
             font-weight: 180;
             margin-left: 100px;
             margin-top: 10px;
         }
 
         hr {
-            height: 2px;
+            height: 1px;
             background-color: #fff;
             border: none;
             width: 100%;
-            position: relative;
             animation: glow 1.5s infinite alternate;
+            margin-top: 0px;
         }
+        
 
         @keyframes glow {
             to {
@@ -113,42 +117,43 @@
         }
     </style>
 </head>
+
 <body>
     <header>
-        <img src="1.png" alt="Logo" />
+        <img src="student.png" alt="Logo" />
         <h1>Attendance Management System</h1>
     </header>
     <hr>
     <section>
-        <div class="introduction">
-            <p><br>Welcome to the Attendance Management System!</p>
-            <p>
-                Dear users,<br>
+        <div class="text-container">
+            <!-- Text content goes here -->
+            <h2>Welcome to the Attendance Management System!</h2>
+            <p>Dear users,<br>
                 Embark on a seamless attendance tracking and academic journey with us.<br> For admins, teachers, counselors, and students, our platform streamlines processes and fosters educational excellence.
                 <br>
                 Thank you for choosing us.<br> Your success is our priority.
-                <br>
+                <br><br>
                 Best,<br>
-                AMS Team
-            </p>
+                AMS Team</p>
         </div>
 
-        <div class="image-container">
-            <img src="student.png" alt="Illustration" />
-        </div>
-
-        <div class="buttons-container">
-            <button onclick="redirectToLogin()" class="login-button">Login</button>
-            <button onclick="redirectToRegister()" class="register-button">Register</button>
+        <div class="image-container img">
+            <img src="rvgg.jpg" alt="Image Description">
         </div>
     </section>
+    <div class="buttons-container">
+        <button onclick="redirectToLogin()" class="login-button">Login</button>
+        <button onclick="redirectToRegister()" class="register-button">Register</button>
+    </div>
     <script>
         function redirectToLogin() {
             window.location.href = 'login.html'; // Replace with the actual URL of your login page
         }
+
         function redirectToRegister() {
             window.location.href = 'register.html'; // Replace with the actual URL of your login page
         }
     </script>
 </body>
+
 </html>
